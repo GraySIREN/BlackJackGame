@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/aaron/Projects/BlackJackGame2.0/BlackJackGame/BlackJackGame.csproj": {}
+    "/Users/aaron/Projects/BlackJackGame/BlackJackGame2.0/BlackJackGame/BlackJackGame.csproj": {}
   },
   "projects": {
-    "/Users/aaron/Projects/BlackJackGame2.0/BlackJackGame/BlackJackGame.csproj": {
+    "/Users/aaron/Projects/BlackJackGame/BlackJackGame2.0/BlackJackGame/BlackJackGame.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/aaron/Projects/BlackJackGame2.0/BlackJackGame/BlackJackGame.csproj",
+        "projectUniqueName": "/Users/aaron/Projects/BlackJackGame/BlackJackGame2.0/BlackJackGame/BlackJackGame.csproj",
         "projectName": "BlackJackGame",
-        "projectPath": "/Users/aaron/Projects/BlackJackGame2.0/BlackJackGame/BlackJackGame.csproj",
+        "projectPath": "/Users/aaron/Projects/BlackJackGame/BlackJackGame2.0/BlackJackGame/BlackJackGame.csproj",
         "packagesPath": "/Users/aaron/.nuget/packages/",
-        "outputPath": "/Users/aaron/Projects/BlackJackGame2.0/BlackJackGame/obj/",
+        "outputPath": "/Users/aaron/Projects/BlackJackGame/BlackJackGame2.0/BlackJackGame/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/aaron/.nuget/NuGet/NuGet.Config"
