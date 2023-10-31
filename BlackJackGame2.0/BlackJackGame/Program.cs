@@ -134,6 +134,7 @@
         {
             Console.WriteLine("Do you want to hit [H] or stand [S]?");
             char choice = char.ToUpper(Console.ReadKey().KeyChar);
+            // Not handling invalid inputs
 
             if (choice == 'H' && playerTotal < 21)
             {
@@ -249,6 +250,9 @@
 
         //******************************************************************************
         // Tell user outcome of round
+
+
+        // Could turn this into a switch statement
 
         void DetermineWinner(int playerTotal, int dealerTotal)
         {
