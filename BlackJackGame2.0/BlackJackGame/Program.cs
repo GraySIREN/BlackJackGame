@@ -401,3 +401,9 @@ public enum Suit
     Clubs,
     Spades
 }
+
+// Need to build a Dealer and Player class
+// Find out easiest way to store X info in each class
+// Refine the dealer hand mechanics
+// Do we want to make changes to the buy-in and betting amounts?
+// Some more changes
