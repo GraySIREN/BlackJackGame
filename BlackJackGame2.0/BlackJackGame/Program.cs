@@ -1,5 +1,4 @@
 ﻿using System;
-//Testing GitHub integration
 {
     Console.ForegroundColor = ConsoleColor.White;
     Deck deck = new();
@@ -82,7 +81,7 @@
     bool playAgain = true;
 
     //******************************************************************************
-    // Any continuous round start
+    // All continuous round start
 
     while (playAgain == true)
     {
@@ -106,7 +105,7 @@
         int dealerTotal = CalculateHandValue(dealerHand);
 
         // Introduce betting mechanic
-        // No decimals, again need to test negative numbers
+        // No decimals, need to test negative numbers
 
         int betValue;
 
@@ -126,7 +125,7 @@
         Console.WriteLine($"You're betting ${betValue}. Good Luck!");
         Console.WriteLine("");
         Console.WriteLine($"Player's hand: {DisplayHand(playerHand, true)} ({playerTotal})");
-        //Console.WriteLine($"Dealer's hand: {DisplayHand(dealerHand, true)} ({dealerTotal})");  //Do not show dealer hand
+        //Console.WriteLine($"Dealer's hand: {DisplayHand(dealerHand, true)} ({dealerTotal})");  //Only show the first card and sequential cards dealer draws
 
         //******************************************************************************
         // Actual Gameplay - Need to refine some of the mechanics and prompts
@@ -146,6 +145,7 @@
 
                 if (dealerTotal < 17)
                 // Need to make a new variable for facedown and faceup cards for the Dealer
+
                 {
                     Card newCardDealer = deck.DealCard();
                     dealerHand.Add(newCardDealer);
@@ -231,7 +231,7 @@
                 }
             }
 
-            // "Adjust the value of Aces if needed" - ChatGPT
+            // Adjust the value of Aces if needed
 
             while (numAces > 0 && total > 21)
             {
@@ -249,7 +249,6 @@
 
         //******************************************************************************
         // Tell user outcome of round
-        // I could probably make this a function to figure this out, adjust bankroll, etc. and use a switch statement?
 
         void DetermineWinner(int playerTotal, int dealerTotal)
         {
@@ -316,7 +315,6 @@
 
             bool playAnotherRound = anotherRoundUpper == "Y";
 
-            // The bool isn't working properly here. We're not catching invalid responses, they are treated as false
             if (playAnotherRound == true)
             {
                 playAgain = true;
