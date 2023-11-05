@@ -1,7 +1,7 @@
 ﻿using System;
 {
     Console.ForegroundColor = ConsoleColor.White;
-    Console.BackgroundColor = ConsoleColor.Black;
+    Console.BackgroundColor = ConsoleColor.Magenta;
     Deck deck = new();
 
     deck.Shuffle(new Random());
@@ -130,7 +130,8 @@
         Console.WriteLine($"You're betting ${betValue}. Good Luck, {playerName}!");
         Console.WriteLine("");
         Console.WriteLine($"Player's hand: {DisplayHand(playerHand, true)} ({playerTotal})");
-        //Console.WriteLine($"Dealer's hand: {DisplayHand(dealerHand, true)} ({dealerTotal})");  //Only show the first card and sequential cards dealer draws
+
+        Console.WriteLine($"Dealer lays one card facedown. Dealer's face-up card: {DisplayCard(dealerHand[0])}");
 
         //******************************************************************************
         // Actual Gameplay - Need to refine some of the mechanics and prompts
