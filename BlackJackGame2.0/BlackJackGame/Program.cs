@@ -113,9 +113,13 @@
         while (true)
         {
             Console.WriteLine("How much would you like to bet? Min ($1) Max ($10000)");
-            if (!int.TryParse(Console.ReadLine(), out betValue) || betValue < 0 || betValue > 10000)
+            if (!int.TryParse(Console.ReadLine(), out betValue) || betValue < 0 || betValue > 10000 || betValue <= buyInValue)
             {
                 Console.WriteLine("Invalid bet amount. Please enter an amount between $1.00 and $10000.");
+            }
+            if (betValue > buyInValue)
+            {
+                Console.WriteLine("You cannot bet more money than you have.. Try again.");
             }
             else
             {
