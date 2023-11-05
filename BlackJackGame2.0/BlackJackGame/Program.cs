@@ -256,9 +256,6 @@
         //******************************************************************************
         // Tell user outcome of round
 
-
-        // Could turn this into a switch statement
-
         void DetermineWinner(int playerTotal, int dealerTotal)
         {
             if (playerTotal > 21)                                       //Player loses
