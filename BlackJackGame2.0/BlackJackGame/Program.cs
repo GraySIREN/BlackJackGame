@@ -127,7 +127,7 @@
             }
         }
 
-        Console.WriteLine($"You're betting ${betValue}. Good Luck!");
+        Console.WriteLine($"You're betting ${betValue}. Good Luck, {playerName}!");
         Console.WriteLine("");
         Console.WriteLine($"Player's hand: {DisplayHand(playerHand, true)} ({playerTotal})");
         //Console.WriteLine($"Dealer's hand: {DisplayHand(dealerHand, true)} ({dealerTotal})");  //Only show the first card and sequential cards dealer draws
@@ -146,7 +146,7 @@
                 Card newCard = deck.DealCard();
                 playerHand.Add(newCard);
                 playerTotal = CalculateHandValue(playerHand);
-                Console.WriteLine($"\nYou drew {DisplayCard(newCard)}");
+                Console.WriteLine($"\n{playerName} drew {DisplayCard(newCard)}");
                 Console.WriteLine($"Player's hand: {DisplayHand(playerHand, true)} ({playerTotal})");
 
                 if (dealerTotal < 17)
