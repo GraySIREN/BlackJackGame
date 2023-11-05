@@ -1,6 +1,7 @@
 ﻿using System;
 {
     Console.ForegroundColor = ConsoleColor.White;
+    Console.BackgroundColor = ConsoleColor.DarkMagenta;
     Deck deck = new();
 
     deck.Shuffle(new Random());
