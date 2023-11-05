@@ -1,7 +1,7 @@
 ﻿using System;
 {
     Console.ForegroundColor = ConsoleColor.White;
-    Console.BackgroundColor = ConsoleColor.DarkMagenta;
+    Console.BackgroundColor = ConsoleColor.Black;
     Deck deck = new();
 
     deck.Shuffle(new Random());
@@ -115,7 +115,7 @@
             Console.WriteLine("How much would you like to bet? Min ($1) Max ($10000)");
             if (!int.TryParse(Console.ReadLine(), out betValue) || betValue < 0 || betValue > 10000)
             {
-                Console.WriteLine("Invalid bet amount. Please enter an amount between $00.01 and $10000.");
+                Console.WriteLine("Invalid bet amount. Please enter an amount between $1.00 and $10000.");
             }
             else
             {
