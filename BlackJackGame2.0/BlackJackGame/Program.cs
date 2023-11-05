@@ -1,7 +1,7 @@
 ﻿using System;
 {
     Console.ForegroundColor = ConsoleColor.White;
-    Console.BackgroundColor = ConsoleColor.Magenta;
+    //Console.BackgroundColor = ConsoleColor.Magenta;
     Deck deck = new();
 
     deck.Shuffle(new Random());
@@ -131,7 +131,7 @@
         Console.WriteLine("");
         Console.WriteLine($"Player's hand: {DisplayHand(playerHand, true)} ({playerTotal})");
 
-        Console.WriteLine($"Dealer lays one card facedown. Dealer's face-up card: {DisplayCard(dealerHand[0])}");
+        Console.WriteLine($"Dealer lays one card facedown. Dealer's face-up card: {DisplayCard(dealerHand[1])}");
 
         //******************************************************************************
         // Actual Gameplay - Need to refine some of the mechanics and prompts
@@ -158,7 +158,7 @@
                     dealerHand.Add(newCardDealer);
                     dealerTotal = CalculateHandValue(dealerHand);
                     Console.WriteLine($"\nDealer has to hit. Dealer draws {DisplayCard(newCardDealer)}");
-                    //Console.WriteLine($"Dealer hand: {DisplayHand(dealerHand, true)} ({dealerTotal})");
+                    Console.WriteLine($"Dealer hand: FaceDown, {DisplayCard(dealerHand[1])}, {DisplayCard(newCard)}");
                     continue;
                 }
                 continue;
@@ -174,7 +174,7 @@
                     dealerHand.Add(newCard);
                     dealerTotal = CalculateHandValue(dealerHand);
                     Console.WriteLine($"\nDealer has to hit. Dealer draws {DisplayCard(newCard)}");
-                    Console.WriteLine($"Dealer hand: {DisplayCard(newCard)} ({dealerTotal})");
+                    Console.WriteLine($"Dealer hand: FaceDown, {DisplayCard(dealerHand[1])}, {DisplayCard(newCard)}");
                 }
                 break;
             }
