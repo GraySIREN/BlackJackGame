@@ -1,7 +1,6 @@
 ﻿using System;
 {
     Console.ForegroundColor = ConsoleColor.White;
-    //Console.BackgroundColor = ConsoleColor.Magenta;
     Deck deck = new();
 
     deck.Shuffle(new Random());
@@ -57,6 +56,7 @@
             }
         }
     }
+
     //******************************************************************************
     // Round 1 Start, Buy-In
 
@@ -130,17 +130,15 @@
         Console.WriteLine($"You're betting ${betValue}. Good Luck, {playerName}!");
         Console.WriteLine("");
         Console.WriteLine($"Player's hand: {DisplayHand(playerHand, true)} ({playerTotal})");
-
         Console.WriteLine($"Dealer lays one card facedown. Dealer's face-up card: {DisplayCard(dealerHand[1])}");
 
         //******************************************************************************
-        // Actual Gameplay - Need to refine some of the mechanics and prompts
+        // Actual Gameplay
 
         while (playerTotal < 21)
         {
             Console.WriteLine("Do you want to hit [H] or stand [S]?");
             char choice = char.ToUpper(Console.ReadKey().KeyChar);
-            // Not handling invalid inputs
 
             if (choice == 'H' && playerTotal < 21)
             {
@@ -151,8 +149,6 @@
                 Console.WriteLine($"Player's hand: {DisplayHand(playerHand, true)} ({playerTotal})");
 
                 if (dealerTotal < 17)
-                // Need to make a new variable for facedown and faceup cards for the Dealer
-
                 {
                     Card newCardDealer = deck.DealCard();
                     dealerHand.Add(newCardDealer);
@@ -207,7 +203,6 @@
                     cardStrings.Add(DisplayCard(hand[i]));
                 }
             }
-
             return string.Join(", ", cardStrings);
         }
 
@@ -245,7 +240,6 @@
                 total -= 10; // Change the value of one Ace from 11 to 1
                 numAces--;
             }
-
             return total;
         }
 
@@ -283,7 +277,6 @@
                 bankRollAmount = bankRollAmount - betValue;
                 Console.WriteLine($"- ${betValue}\nBankroll: ${bankRollAmount}");
                 return;
-                //Immediate loss if Dealer gets 21
             }
             else if (playerTotal > dealerTotal)                         //Player wins
             {
@@ -302,7 +295,7 @@
                 Console.WriteLine("It's a tie!");                       // TIE
                 Console.WriteLine($"All bets returned. BankRoll : {bankRollAmount}");
             }
-            else if (dealerTotal == 21)
+            else if (dealerTotal == 21)                                 //Player loses
             {
                 Console.WriteLine("Dealer has BlackJack! You lose!");
                 bankRollAmount = bankRollAmount - betValue;
